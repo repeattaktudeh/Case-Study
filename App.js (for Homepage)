@@ -1,0 +1,62 @@
+import React, {Component} from 'react';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+
+export default class App extends Component {
+  constructor() { 
+    super();  
+    this.state = {
+      name: '',
+    };  
+    
+}  
+
+
+render() {
+  return (
+
+    <View style={styles.container}>
+
+      <Text style={styles.header}>e-Wallet Management System {"\n"}</Text>
+
+      <Text style={styles.header}>by Group G{"\n"}</Text>
+
+      <TextInput
+                  style={styles.textinput}
+                  value={this.state.name}
+                  placeholder="Enter name"  
+                  onChangeText={name => this.setState({name})}
+                />
+      
+    </View>
+  ); 
+}}
+
+
+const styles = StyleSheet.create({ 
+  container: {
+  flex: 1,
+  justifyContent: 'flex-start', 
+  alignItems: 'center', 
+  //backgroundColor: '#EB85AF',
+
+  }, 
+  
+  header: {
+  marginTop: 100,
+  fontSize: 30, 
+  fontFamily: 'Courier New',
+  textAlign: 'center', 
+  margin: 10,
+  marginBottom: 50,
+  },
+
+  textinput: {
+  height: 60, 
+  textAlign: 'center', 
+  width: 300,
+  borderColor: 'black', 
+  borderWidth: 1 ,
+  marginBottom: 10
+ },
+
+})
